@@ -31,5 +31,11 @@ namespace Resignation_Service.Models
         /// Gets or sets the last working day
         /// </summary>
         public DateTime dtLastWorkingDate { get; set; }
+        //public List<FeedbackModel> txtFeedback { get; set; }
+    }
+    public class FeedbackModel
+    {
+        public string txtQuestions { get; set; }
+        public string txtAnswers { get; set; }
     }
 }

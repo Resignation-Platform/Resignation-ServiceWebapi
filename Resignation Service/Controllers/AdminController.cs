@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Resignation_Service.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class AdminController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace Resignation_Service.Controllers
         }
 
         [HttpGet]
-        [Route("{AdminDetails}")]
+        
         public IActionResult FetchAdminActionItems(string AdminEmpNo, string AdminRole)
         {
 

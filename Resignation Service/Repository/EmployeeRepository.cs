@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Resignation_Service.Repository
 {
@@ -133,13 +134,32 @@ namespace Resignation_Service.Repository
             SqlParameter[] arr_sqlParameter = new SqlParameter[2];
             DataSet SaveEmpdataObj= new DataSet();
             List<EmployeeExit> employeeExit_list = new List<EmployeeExit>();
-            employeeExit_list.Add(employeeExit);
+            employeeExit_list.Add(new EmployeeExit() 
+            {  txtEmployeeNumber=employeeExit.txtEmployeeNumber ,
+                txtEmpMailId   =employeeExit.txtEmpMailId ,
+                txtEmpPersonalEmailid  = employeeExit.txtEmpPersonalEmailid ,
+                txtEmpContact   = employeeExit.txtEmpContact ,
+               dtSeparationDate = employeeExit.dtSeparationDate ,
+               dtLastWorkingDate = employeeExit.dtLastWorkingDate ,
+            
+            });
             string status = string.Empty;
-           DataTable empExitDt = this._common.ConvertToDataTable(employeeFeedback);
+            
             try
             {
-                arr_sqlParameter[0] = new SqlParameter("", SqlDbType.NVarChar);
-                arr_sqlParameter[0].Value= employeeExit;
+
+                arr_sqlParameter[0] = new SqlParameter("@txtEmpData", SqlDbType.NVarChar);
+                DataTable empExitData = this._common.ConvertToDataTable(employeeExit_list);
+                XmlDocument empExitDataXML = this._common.ConverToXML(empExitData);
+                arr_sqlParameter[0].Value= empExitDataXML.InnerXml;
+
+                arr_sqlParameter[1]=new SqlParameter("@txtFeedbackdata", SqlDbType.NVarChar);
+                DataTable empExitFeedbackData = this._common.ConvertToDataTable(employeeFeedback);
+                XmlDocument empFeedbackDataXML = this._common.ConverToXML(empExitFeedbackData);
+                arr_sqlParameter[1].Value= empFeedbackDataXML.InnerXml;
+                SaveEmpdataObj = this._common.ExecuteDSTimeout("spSaveEmployeeExitDetails", arr_sqlParameter);
+                status=SaveEmpdataObj.Tables[0].AsEnumerable().Select(row=>row.Field<string>("txtstatus")).ToString();
+
             }
             catch (Exception)
             {
@@ -147,7 +167,7 @@ namespace Resignation_Service.Repository
                 throw;
             }
 
-            return string.Empty;
+            return status;
         }
 
     }

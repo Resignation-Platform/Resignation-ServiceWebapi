@@ -32,7 +32,8 @@ namespace Resignation_Service.Utility.AutoMapper
                 .ForMember(dest => dest.txtEmpPersonalEmailid, opt => opt.MapFrom(src => src.PersonalEmailId))
                 .ForMember(dest => dest.txtEmpContact, opt => opt.MapFrom(src => src.ContactNumber))
                 .ForMember(dest => dest.dtSeparationDate, opt => opt.MapFrom(src => src.SeparationDate))
-                .ForMember(dest => dest.dtLastWorkingDate, opt => opt.MapFrom(src => src.LastWorkingDay));
+                .ForMember(dest => dest.dtLastWorkingDate, opt => opt.MapFrom(src => src.LastWorkingDay))
+                ;
 
             CreateMap<AdminDetails, AdminDetailsViewModel>()
                 .ForMember(dest => dest.EmployeeNo, opt => opt.MapFrom(src => src.txtEmployeeNo))
