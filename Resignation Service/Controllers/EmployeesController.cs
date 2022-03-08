@@ -38,6 +38,25 @@ namespace Resignation_Service.Controllers
         }
 
         /// <summary>
+        /// Fetches the employee exit details
+        /// </summary>
+        /// <param name="empNo">Employee Number</param>
+        /// <returns>Employee exit details</returns>
+        [HttpGet]
+        [Route("{empNo}")]
+        public IActionResult FetchEmployeeExitDetails(string empNo)
+        {
+            if (!string.IsNullOrWhiteSpace(empNo))
+            {
+                EmployeeExitViewModel employeeView = this.employeeService.FetchEmployeeExitDetails(empNo);
+                return employeeView != null ? this.Ok(employeeView) : this.NotFound();
+            }
+
+            string errorMessage = "Please check the input parameter";
+            return this.BadRequest(errorMessage);
+        }
+
+        /// <summary>
         /// Fetches the employee details
         /// </summary>
         /// <param name="empName">Employee name</param>
@@ -49,6 +68,8 @@ namespace Resignation_Service.Controllers
             List<FeedbackViewModel> feedbackView = this.employeeService.FetchFeedbackQuestions();
             return feedbackView != null ? this.Ok(feedbackView) : this.NotFound();
         }
+
+
         /// <summary>
         /// Saves the employee details
         /// </summary>

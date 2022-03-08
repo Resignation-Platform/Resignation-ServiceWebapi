@@ -24,6 +24,13 @@ namespace Resignation_Service.Repository
         public List<Feedback> FetchFeedbackQuestions();
 
         /// <summary>
+        /// Fetches the employee exit details
+        /// </summary>
+        /// <param name="empNo">Employee Number</param>
+        /// <returns>Employee exit details</returns>
+        public EmployeeExit FetchEmployeeExitDetails(string empNo);
+
+        /// <summary>
         /// Saves the employee exit details
         /// </summary>
         /// <param name="employeeExit">Employee exit data</param>

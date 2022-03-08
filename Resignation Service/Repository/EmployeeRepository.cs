@@ -65,6 +65,50 @@ namespace Resignation_Service.Repository
 
 
         /// <summary>
+        /// Fetches the employee exit details
+        /// </summary>
+        /// <param name="empNo">Employee Number</param>
+        /// <returns>Employee exit details</returns>
+        public EmployeeExit FetchEmployeeExitDetails(string empNo)
+        {
+            DataSet dataSetobj = new DataSet();
+            SqlParameter[] arr_sqlParameter = new SqlParameter[1];
+            List<EmployeeExit> empList = new List<EmployeeExit>();
+            try
+            {
+                arr_sqlParameter[0] = new SqlParameter("@txtEmpNo", SqlDbType.VarChar, 8);
+                arr_sqlParameter[0].Value = empNo;
+                dataSetobj = _common.ExecuteDSTimeout("spFetchExitProgress", arr_sqlParameter);
+                empList = dataSetobj.Tables[0].AsEnumerable().Select(datarow => new EmployeeExit
+                {
+                    txtEmpNo = datarow.Field<string>("txtEmpNo"),
+                    txtEmpId = datarow.Field<string>("txtEmpId"),
+                    txtEmpPersonalId = datarow.Field<string>("txtEmpPersonalId"),
+                    txtcontact = datarow.Field<string>("txtcontact"),
+                    dtSeperationdate = datarow.Field<DateTime>("dtSeperationdate"),
+                    dtLastWorkingDate = datarow.Field<DateTime>("dtLastWorkingDate"),
+                    flgIsHrApproved = datarow.Field<char>("flgIsHrApproved"),
+                    flgIsPmApproed = datarow.Field<char>("flgIsPmApproed"),
+                    flgisDHApproved = datarow.Field<char>("flgisDHApproved"),
+                    flgITClearance = datarow.Field<char>("flgITClearance"),
+                    flgFinanceClearance = datarow.Field<char>("flgFinanceClearance"),
+
+                }).ToList();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+            return empList.FirstOrDefault();
+        }
+
+
+
+        /// <summary>
         /// Fetches the feedback questions
         /// </summary>
         /// <returns>Feedback questions</returns>

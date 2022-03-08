@@ -10,28 +10,57 @@ namespace Resignation_Service.Models
         /// <summary>
         /// Gets or sets the employee number
         /// </summary>
-        public string txtEmployeeNumber { get; set; }
+        public string txtEmpNo { get; set; }
+
         /// <summary>
-        /// Gets or sets the mail id
+        /// Gets or sets the employee email
         /// </summary>
-        public string txtEmpMailId { get; set; }
+        public string txtEmpId { get; set; }
+
         /// <summary>
-        /// Gets or sets the personal email id
+        /// Gets or sets the employee personal email
         /// </summary>
-        public string txtEmpPersonalEmailid { get; set; }
+        public string txtEmpPersonalId { get; set; }
+
         /// <summary>
-        /// Gets or sets the contact number
+        /// Gets or sets the employee contact number
         /// </summary>
-        public string txtEmpContact { get; set; }
+        public string txtcontact { get; set; }
+
         /// <summary>
-        /// Separation date
+        /// Gets or sets the date of Separation 
         /// </summary>
-        public DateTime dtSeparationDate { get; set; }
+        public DateTime dtSeperationdate { get; set; }
+
         /// <summary>
-        /// Gets or sets the last working day
+        /// Gets or sets the last working date
         /// </summary>
         public DateTime dtLastWorkingDate { get; set; }
-        //public List<FeedbackModel> txtFeedback { get; set; }
+
+        /// <summary>
+        /// Gets or sets the HR approval status
+        /// </summary>
+        public char flgIsHrApproved { get; set; }
+
+        /// <summary>
+        /// Gets or sets the PM approval status
+        /// </summary>
+        public char flgIsPmApproed { get; set; }
+
+        // <summary>
+        /// Gets or sets the DH approval status
+        /// </summary>
+        public char flgisDHApproved { get; set; }
+
+        /// <summary>
+        /// Gets or sets the IT clearance status
+        /// </summary>
+        public char flgITClearance { get; set; }
+
+        // <summary>
+        /// Gets or sets the finance clearance status
+        /// </summary>
+        public char flgFinanceClearance { get; set; }
     }
     public class FeedbackModel
     {

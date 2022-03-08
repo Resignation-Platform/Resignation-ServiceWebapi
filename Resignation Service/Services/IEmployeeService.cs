@@ -17,6 +17,13 @@ namespace Resignation_Service.Services
         public EmployeeViewModel FetchEmployeeDetail(string empName);
 
         /// <summary>
+        /// Fetches the employee exit details
+        /// </summary>
+        /// <param name="empNo">Employee Number</param>
+        /// <returns>Employee details</returns>
+        public EmployeeExitViewModel FetchEmployeeExitDetails(string empNo);
+
+        /// <summary>
         /// Fetchs the feedback questions
         /// </summary>
         /// <returns>Feedback questions</returns>

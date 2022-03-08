@@ -35,6 +35,17 @@ namespace Resignation_Service.Services
         }
 
         /// <summary>
+        /// Fetches the employee exit details
+        /// </summary>
+        /// <param name="empNo">Employee Number</param>
+        /// <returns>Employee exit details</returns>
+        public EmployeeExitViewModel FetchEmployeeExitDetails(string empNo)
+        {
+            EmployeeExit employeeExitDetails = this.employeeRepository.FetchEmployeeExitDetails(empNo);
+            return this.mapper.Map<EmployeeExitViewModel>(employeeExitDetails);
+        }
+
+        /// <summary>
         /// Fetches the feedback questions
         /// </summary>
         /// <returns>Feedback questions</returns>
