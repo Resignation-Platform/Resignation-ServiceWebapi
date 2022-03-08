@@ -99,9 +99,9 @@ namespace Resignation_Service_Test.Helper
         /// Gets the employee exit data
         /// </summary>
         /// <returns>Employee exit data</returns>
-        public static EmployeeExitViewModel GetEmployeeExitData()
+        public static EmployeeExitDetailsViewModel GetEmployeeExitData()
         {
-            return new EmployeeExitViewModel()
+            return new EmployeeExitDetailsViewModel()
             {
                 EmployeeNumber = "737473",
                 MailId = "test1@gmail.com",

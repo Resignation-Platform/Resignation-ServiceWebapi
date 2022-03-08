@@ -39,6 +39,7 @@ namespace Resignation_Service
             services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddSingleton<ICommon, Common>();
+            services.AddCors();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
@@ -59,6 +60,13 @@ namespace Resignation_Service
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(builder =>
+            {
+                builder
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+            });
 
             app.UseAuthorization();
 

@@ -18,11 +18,6 @@ namespace Resignation_Service.Controllers
         }
 
 
-        /// <summary>
-        /// Fetches the employee details
-        /// </summary>
-        /// <param name="empName">Employee name</param>
-        /// <returns>Employee details</returns>
         [HttpGet]
         [Route("{empName}")]
         public IActionResult FetchEmployeeDetails(string empName)
@@ -37,13 +32,10 @@ namespace Resignation_Service.Controllers
             return this.BadRequest(errorMessage);
         }
 
-        /// <summary>
-        /// Fetches the employee exit details
-        /// </summary>
-        /// <param name="empNo">Employee Number</param>
-        /// <returns>Employee exit details</returns>
+        
         [HttpGet]
         [Route("{empNo}")]
+        //sudhanshu
         public IActionResult FetchEmployeeExitDetails(string empNo)
         {
             if (!string.IsNullOrWhiteSpace(empNo))
@@ -56,11 +48,7 @@ namespace Resignation_Service.Controllers
             return this.BadRequest(errorMessage);
         }
 
-        /// <summary>
-        /// Fetches the employee details
-        /// </summary>
-        /// <param name="empName">Employee name</param>
-        /// <returns>Employee details</returns>
+        
         [HttpGet]
         [Route("Feedback")]
         public IActionResult FetchFeedBackQuestions()
@@ -70,13 +58,8 @@ namespace Resignation_Service.Controllers
         }
 
 
-        /// <summary>
-        /// Saves the employee details
-        /// </summary>
-        /// <param name="employeeExitData">Employee exit data</param>
-        /// <returns>Saved status</returns>
         [HttpPost]
-        public IActionResult SaveEmployeeExitDetails([FromBody] EmployeeExitViewModel employeeExitData)
+        public IActionResult SaveEmployeeExitDetails([FromBody] EmployeeExitDetailsViewModel employeeExitData)
         {
             string saveEmployeeExitStatus = this.employeeService.SaveEmployeeExitDetails(employeeExitData);
             return !string.IsNullOrWhiteSpace(saveEmployeeExitStatus) ? this.Ok(saveEmployeeExitStatus) : this.BadRequest();

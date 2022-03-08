@@ -11,6 +11,7 @@ namespace Resignation_Service.ViewModels
         /// Gets or sets the employee number
         /// </summary>
         public string EmployeeNumber { get; set; }
+        public string EmployeeName { get; set; }
 
         /// <summary>
         /// Gets or sets the employee email

@@ -212,8 +212,8 @@ namespace Resignation_Service_Test.Controllers
         {
             //Arrange
             string savedStatus = "Data saved";
-            EmployeeExitViewModel employeeExitData = MockData.GetEmployeeExitData();
-            this.employeeService.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExitViewModel>()))
+            EmployeeExitDetailsViewModel employeeExitData = MockData.GetEmployeeExitData();
+            this.employeeService.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExitDetailsViewModel>()))
                 .Returns(savedStatus);
 
             //Act
@@ -228,8 +228,8 @@ namespace Resignation_Service_Test.Controllers
         public void SaveEmployeeExitDetails_SaveUnsuccessful_ReturnsNotFound()
         {
             //Arrange
-            EmployeeExitViewModel employeeExitData = MockData.GetEmployeeExitData();
-            this.employeeService.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExitViewModel>()))
+            EmployeeExitDetailsViewModel employeeExitData = MockData.GetEmployeeExitData();
+            this.employeeService.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExitDetailsViewModel>()))
                 .Returns(string.Empty);
 
             //Act

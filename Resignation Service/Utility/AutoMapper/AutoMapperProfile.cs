@@ -26,7 +26,7 @@ namespace Resignation_Service.Utility.AutoMapper
                 .ForMember(dest => dest.FeedbackQuestion, opt => opt.MapFrom(src => src.txtQuestion))
                 .ForMember(dest => dest.Options, opt => opt.MapFrom(src => src.txtOptions));
 
-            CreateMap<EmployeeExitViewModel, EmployeeExit>()
+            CreateMap<EmployeeExitDetailsViewModel, EmployeeExitDetails>()
                 .ForMember(dest => dest.txtEmployeeNumber, opt => opt.MapFrom(src => src.EmployeeNumber))
                 .ForMember(dest => dest.txtEmpMailId, opt => opt.MapFrom(src => src.MailId))
                 .ForMember(dest => dest.txtEmpPersonalEmailid, opt => opt.MapFrom(src => src.PersonalEmailId))

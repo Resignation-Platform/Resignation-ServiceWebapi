@@ -7354,32 +7354,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/sudhasharma/.nuget/packages/": {}
+    "C:\\Users\\vveeranjaneyulu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sudhasharma/Downloads/Product/Resignation-ServiceWebapi/Resignation Service Test/Resignation Service Test.csproj",
+      "projectUniqueName": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service Test\\Resignation Service Test.csproj",
       "projectName": "Resignation Service Test",
-      "projectPath": "/Users/sudhasharma/Downloads/Product/Resignation-ServiceWebapi/Resignation Service Test/Resignation Service Test.csproj",
-      "packagesPath": "/Users/sudhasharma/.nuget/packages/",
-      "outputPath": "/Users/sudhasharma/Downloads/Product/Resignation-ServiceWebapi/Resignation Service Test/obj/",
+      "projectPath": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service Test\\Resignation Service Test.csproj",
+      "packagesPath": "C:\\Users\\vveeranjaneyulu\\.nuget\\packages\\",
+      "outputPath": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sudhasharma/.config/NuGet/NuGet.Config"
+        "C:\\Users\\vveeranjaneyulu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/sudhasharma/Downloads/Product/Resignation-ServiceWebapi/Resignation Service/Resignation Service.csproj": {
-              "projectPath": "/Users/sudhasharma/Downloads/Product/Resignation-ServiceWebapi/Resignation Service/Resignation Service.csproj"
+            "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj": {
+              "projectPath": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj"
             }
           }
         }
@@ -7430,7 +7432,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

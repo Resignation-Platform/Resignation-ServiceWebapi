@@ -23,11 +23,7 @@ namespace Resignation_Service.Repository
 
         }
 
-        /// <summary>
-        /// Fetches the employee details
-        /// </summary>
-        /// <param name="empName">Employee name</param>
-        /// <returns>Employee details</returns>
+        
         public Employee  FetchEmployeeDetail(string empName)
         {
             DataSet dataSetobj = new DataSet();
@@ -35,7 +31,7 @@ namespace Resignation_Service.Repository
             List<Employee> empList = new List<Employee>();
             try
             {
-                arr_sqlParameter[0] = new SqlParameter("@txtEmpName", SqlDbType.VarChar, 8);
+                arr_sqlParameter[0] = new SqlParameter("@txtEmpName", SqlDbType.VarChar, 255);
                 arr_sqlParameter[0].Value = empName;
                 dataSetobj =  _common.ExecuteDSTimeout("spFetchEmployeeDetails", arr_sqlParameter);
                 empList =  dataSetobj.Tables[0].AsEnumerable().Select(datarow =>new Employee
@@ -64,11 +60,7 @@ namespace Resignation_Service.Repository
 
 
 
-        /// <summary>
-        /// Fetches the employee exit details
-        /// </summary>
-        /// <param name="empNo">Employee Number</param>
-        /// <returns>Employee exit details</returns>
+        
         public EmployeeExit FetchEmployeeExitDetails(string empNo)
         {
             DataSet dataSetobj = new DataSet();
@@ -107,11 +99,6 @@ namespace Resignation_Service.Repository
         }
 
 
-
-        /// <summary>
-        /// Fetches the feedback questions
-        /// </summary>
-        /// <returns>Feedback questions</returns>
         public List<Feedback> FetchFeedbackQuestions()
         {
             DataSet feedback_dataSet= new DataSet();
@@ -167,25 +154,21 @@ namespace Resignation_Service.Repository
             return status;
         }
 
-        /// <summary>
-        /// Saves the employee exit details
-        /// </summary>
-        /// <param name="employeeExit">Employee exit data</param>
-        /// <param name="employeeFeedback">employee feedback</param>
-        /// <returns>Saved status</returns>
-        public string SaveEmployeeExitDetails(EmployeeExit employeeExit, List<ExitFeedback> employeeFeedback)
+        
+        public string SaveEmployeeExitDetails(EmployeeExitDetails employeeExit, List<ExitFeedback> employeeFeedback)
         {
             SqlParameter[] arr_sqlParameter = new SqlParameter[2];
             DataSet SaveEmpdataObj= new DataSet();
-            List<EmployeeExit> employeeExit_list = new List<EmployeeExit>();
-            employeeExit_list.Add(new EmployeeExit() 
-            {  txtEmployeeNumber=employeeExit.txtEmployeeNumber ,
-                txtEmpMailId   =employeeExit.txtEmpMailId ,
-                txtEmpPersonalEmailid  = employeeExit.txtEmpPersonalEmailid ,
-                txtEmpContact   = employeeExit.txtEmpContact ,
-               dtSeparationDate = employeeExit.dtSeparationDate ,
-               dtLastWorkingDate = employeeExit.dtLastWorkingDate ,
-            
+            List<EmployeeExitDetails> employeeExit_list = new List<EmployeeExitDetails>();
+            employeeExit_list.Add(new EmployeeExitDetails()
+            {
+                txtEmployeeNumber = employeeExit.txtEmployeeNumber,
+                txtEmpMailId = employeeExit.txtEmpMailId,
+                txtEmpPersonalEmailid = employeeExit.txtEmpPersonalEmailid,
+                txtEmpContact = employeeExit.txtEmpContact,
+                dtSeparationDate = employeeExit.dtSeparationDate,
+                dtLastWorkingDate = employeeExit.dtLastWorkingDate,
+
             });
             string status = string.Empty;
             

@@ -33,7 +33,7 @@ namespace Resignation_Service.Services
         /// Saves the employee exit details
         /// </summary>
         /// <returns>Saved status</returns>
-        public string SaveEmployeeExitDetails(EmployeeExitViewModel employeeExitData);
+        public string SaveEmployeeExitDetails(EmployeeExitDetailsViewModel employeeExitData);
 
 
         public string UpdateAdminApprovals(string exitEmpNo, string adminRole);

@@ -36,7 +36,7 @@ namespace Resignation_Service.Repository
         /// <param name="employeeExit">Employee exit data</param>
         /// <param name="employeeFeedback">employee feedback</param>
         /// <returns>Saved status</returns>
-        public string SaveEmployeeExitDetails(EmployeeExit employeeExit, List<ExitFeedback> employeeFeedback);
+        public string SaveEmployeeExitDetails(EmployeeExitDetails employeeExit, List<ExitFeedback> employeeFeedback);
 
         public string UpdateAdminApprovals(string exitEmpNo, string adminRole);
     }

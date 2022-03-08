@@ -109,8 +109,8 @@ namespace Resignation_Service_Test.Services
         {
             // Arrange
             string savedStatus = "Data saved";
-            EmployeeExitViewModel employeeExitData = MockData.GetEmployeeExitData();
-            this.employeeRepository.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExit>(), It.IsAny<List<ExitFeedback>>()))
+            EmployeeExitDetailsViewModel employeeExitData = MockData.GetEmployeeExitData();
+            this.employeeRepository.Setup(x => x.SaveEmployeeExitDetails(It.IsAny<EmployeeExitDetails>(), It.IsAny<List<ExitFeedback>>()))
                 .Returns(savedStatus);
 
             // Act
@@ -120,7 +120,7 @@ namespace Resignation_Service_Test.Services
             Assert.Equal(savedStatus, result);
             this.employeeRepository.Verify(
                 x => x.SaveEmployeeExitDetails(
-                    It.Is<EmployeeExit>(
+                    It.Is<EmployeeExitDetails>(
                         x => x.dtLastWorkingDate == DateTime.Today.AddDays(60)
                         && x.txtEmployeeNumber == employeeExitData.EmployeeNumber), employeeExitData.Feedbacks), Times.Once);
         }
