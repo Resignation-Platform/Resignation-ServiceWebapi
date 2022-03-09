@@ -18,6 +18,6 @@ namespace Resignation_Service.ViewModels
         
         public DateTime LastWorkingDay { get; set; }
         
-        public List<ExitFeedback> Feedbacks { get; set; }
+        public List<ExitFeedbackViewModel> Feedbacks { get; set; }
     }
 }

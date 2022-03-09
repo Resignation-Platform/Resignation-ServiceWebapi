@@ -52,7 +52,8 @@ namespace Resignation_Service.Services
             EmployeeExitDetails employeeExit = this.mapper.Map<EmployeeExitDetails>(employeeExitData);
             employeeExit.dtSeparationDate = DateTime.Today;
             employeeExit.dtLastWorkingDate = DateTime.Today.AddDays(60);
-            return this.employeeRepository.SaveEmployeeExitDetails(employeeExit, employeeExitData.Feedbacks);
+            var feedback_mapp = this.mapper.Map<List<ExitFeedback>>(employeeExitData.Feedbacks);
+            return this.employeeRepository.SaveEmployeeExitDetails(employeeExit, feedback_mapp);
         }
         public string UpdateAdminApprovals(string exitEmpNo, string adminRole)
         {

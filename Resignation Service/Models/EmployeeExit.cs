@@ -40,27 +40,27 @@ namespace Resignation_Service.Models
         /// <summary>
         /// Gets or sets the HR approval status
         /// </summary>
-        public char flgIsHrApproved { get; set; }
+        public string flgIsHrApproved { get; set; }
 
         /// <summary>
         /// Gets or sets the PM approval status
         /// </summary>
-        public char flgIsPmApproed { get; set; }
+        public string flgIsPmApproed { get; set; }
 
         // <summary>
         /// Gets or sets the DH approval status
         /// </summary>
-        public char flgisDHApproved { get; set; }
+        public string flgisDHApproved { get; set; }
 
         /// <summary>
         /// Gets or sets the IT clearance status
         /// </summary>
-        public char flgITClearance { get; set; }
+        public string flgITClearance { get; set; }
 
         // <summary>
         /// Gets or sets the finance clearance status
         /// </summary>
-        public char flgFinanceClearance { get; set; }
+        public string flgFinanceClearance { get; set; }
     }
     public class FeedbackModel
     {

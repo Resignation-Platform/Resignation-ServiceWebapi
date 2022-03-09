@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Resignation_Service.Services;
 using Resignation_Service.ViewModels;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ namespace Resignation_Service.Controllers
 {
     [Route("api/[controller]/")]
     [ApiController]
+    
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeService employeeService;
@@ -34,7 +36,7 @@ namespace Resignation_Service.Controllers
 
         
         [HttpGet]
-        [Route("{empNo}")]
+        [Route("[action]/{empNo}")]
         //sudhanshu
         public IActionResult FetchEmployeeExitDetails(string empNo)
         {

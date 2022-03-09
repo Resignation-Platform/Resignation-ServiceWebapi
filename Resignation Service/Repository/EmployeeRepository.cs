@@ -79,11 +79,11 @@ namespace Resignation_Service.Repository
                     txtcontact = datarow.Field<string>("txtcontact"),
                     dtSeperationdate = datarow.Field<DateTime>("dtSeperationdate"),
                     dtLastWorkingDate = datarow.Field<DateTime>("dtLastWorkingDate"),
-                    flgIsHrApproved = datarow.Field<char>("flgIsHrApproved"),
-                    flgIsPmApproed = datarow.Field<char>("flgIsPmApproed"),
-                    flgisDHApproved = datarow.Field<char>("flgisDHApproved"),
-                    flgITClearance = datarow.Field<char>("flgITClearance"),
-                    flgFinanceClearance = datarow.Field<char>("flgFinanceClearance"),
+                    flgIsHrApproved = datarow.Field<string>("flgIsHrApproved"),
+                    flgIsPmApproed = datarow.Field<string>("flgIsPmApproed"),
+                    flgisDHApproved = datarow.Field<string>("flgisDHApproved"),
+                    flgITClearance = datarow.Field<string>("flgITClearance"),
+                    flgFinanceClearance = datarow.Field<string>("flgFinanceClearance"),
 
                 }).ToList();
 

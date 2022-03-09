@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Resignation_Service.ViewModels
 {
-    public class ExitFeedback
+    public class ExitFeedbackViewModel
     {
         /// <summary>
         /// Gets or sets exit feedback questions

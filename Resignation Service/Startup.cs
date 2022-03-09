@@ -31,16 +31,21 @@ namespace Resignation_Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+           
             services.AddControllers();
             ConnectionString = this.Configuration.GetConnectionString("ResignationConnection");
+
+            
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddSingleton<ICommon, Common>();
-            services.AddCors();
+            
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddCors();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Resignation_Service", Version = "v1" });
@@ -58,15 +63,16 @@ namespace Resignation_Service
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(builder => {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+
 
             app.UseRouting();
-            app.UseCors(builder =>
-            {
-                builder
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-            });
+            
 
             app.UseAuthorization();
 

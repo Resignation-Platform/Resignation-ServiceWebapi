@@ -115,6 +115,7 @@ namespace Resignation_Service_Test.Services
 
             // Act
             string result = this.employeeService.SaveEmployeeExitDetails(employeeExitData);
+           
 
             // Assert
             Assert.Equal(savedStatus, result);
@@ -122,7 +123,7 @@ namespace Resignation_Service_Test.Services
                 x => x.SaveEmployeeExitDetails(
                     It.Is<EmployeeExitDetails>(
                         x => x.dtLastWorkingDate == DateTime.Today.AddDays(60)
-                        && x.txtEmployeeNumber == employeeExitData.EmployeeNumber), employeeExitData.Feedbacks), Times.Once);
+                        && x.txtEmployeeNumber == employeeExitData.EmployeeNumber), It.Is<List<ExitFeedback>>(x=>x[0].txtQuestion== "What is the reason for resignation?")), Times.Once);
         }
     }
 }

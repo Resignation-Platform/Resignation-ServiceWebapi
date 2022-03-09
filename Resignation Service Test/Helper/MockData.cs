@@ -109,9 +109,9 @@ namespace Resignation_Service_Test.Helper
                 ContactNumber = "993994322",
                 SeparationDate = DateTime.Parse("2022-03-04"),
                 LastWorkingDay = DateTime.Parse("2022-05-04"),
-                Feedbacks = new List<ExitFeedback>()
+                Feedbacks = new List<ExitFeedbackViewModel>()
                 {
-                    new ExitFeedback()
+                    new ExitFeedbackViewModel()
                     {
                         Question = "What is the reason for resignation?",
                         Answer = "Culture"
