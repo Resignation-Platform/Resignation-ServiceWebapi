@@ -161,3 +161,5 @@ C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\ref\Resignation Service.dll
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.pdb
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.genruntimeconfig.cache
+C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.csproj.AssemblyReference.cache

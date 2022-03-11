@@ -35,7 +35,8 @@ namespace Resignation_Service.Repository
                     txtEmpPersonalEmailid=data.Field<string>("txtEmpPersonalEmailid"),
                     txtEmpContact=data.Field<string>("txtEmpContact"),
                     dtSeperationDate=data.Field<DateTime>("dtSeperationDate"),
-                    dtLastWorkingDate=data.Field<DateTime>("dtLastWorkingDate")
+                    dtLastWorkingDate=data.Field<DateTime>("dtLastWorkingDate"),
+                    flgIsHrApproved=data.Field<string>("flgIsHrApproved")
                 }).ToList();
 
             }

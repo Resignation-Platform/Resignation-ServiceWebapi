@@ -1,4 +1,5 @@
-﻿using Resignation_Service.Models;
+﻿using Newtonsoft.Json;
+using Resignation_Service.Models;
 using Resignation_Service.Utility.DataAccess;
 using Resignation_Service.ViewModels;
 using System;
@@ -171,7 +172,8 @@ namespace Resignation_Service.Repository
 
             });
             string status = string.Empty;
-            
+            var feed =new {feedback=employeeFeedback};
+
             try
             {
 
@@ -181,11 +183,11 @@ namespace Resignation_Service.Repository
                 arr_sqlParameter[0].Value= empExitDataXML.InnerXml;
 
                 arr_sqlParameter[1]=new SqlParameter("@txtFeedbackdata", SqlDbType.NVarChar);
-                DataTable empExitFeedbackData = this._common.ConvertToDataTable(employeeFeedback);
-                XmlDocument empFeedbackDataXML = this._common.ConverToXML(empExitFeedbackData);
-                arr_sqlParameter[1].Value= empFeedbackDataXML.InnerXml;
+                //DataTable empExitFeedbackData = this._common.ConvertToDataTable(employeeFeedback);
+                //XmlDocument empFeedbackDataXML = this._common.ConverToXML(empExitFeedbackData);
+                arr_sqlParameter[1].Value = JsonConvert.SerializeObject(feed);
                 SaveEmpdataObj = this._common.ExecuteDSTimeout("spSaveEmployeeExitDetails", arr_sqlParameter);
-                status=SaveEmpdataObj.Tables[0].AsEnumerable().Select(row=>row.Field<string>("txtstatus")).ToString();
+                status = SaveEmpdataObj.Tables[0].Rows[0]["txtstatus"].ToString();
 
             }
             catch (Exception)

@@ -10,5 +10,6 @@ namespace Resignation_Service.Models
         public string txtEmpContact { get; set; }
         public DateTime dtSeperationDate { get; set; }
         public DateTime dtLastWorkingDate { get; set; }
+        public string flgIsHrApproved { get; set; }
     }
 }
