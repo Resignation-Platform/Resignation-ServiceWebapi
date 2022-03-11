@@ -6107,19 +6107,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vveeranjaneyulu\\.nuget\\packages\\": {}
+    "C:\\Users\\Sarath Kumar V\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj",
+      "projectUniqueName": "D:\\Product Week Project\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj",
       "projectName": "Resignation Service",
-      "projectPath": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj",
-      "packagesPath": "C:\\Users\\vveeranjaneyulu\\.nuget\\packages\\",
-      "outputPath": "C:\\Veeranjaneyulu__\\Resignation-ServiceWebapi\\Resignation Service\\obj\\",
+      "projectPath": "D:\\Product Week Project\\Resignation-ServiceWebapi\\Resignation Service\\Resignation Service.csproj",
+      "packagesPath": "C:\\Users\\Sarath Kumar V\\.nuget\\packages\\",
+      "outputPath": "D:\\Product Week Project\\Resignation-ServiceWebapi\\Resignation Service\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vveeranjaneyulu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sarath Kumar V\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6188,7 +6193,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -161,5 +161,50 @@ C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\ref\Resignation Service.dll
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.pdb
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Veeranjaneyulu__\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.csproj.AssemblyReference.cache
+=======
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\appsettings.Development.json
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\appsettings.json
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.exe
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.deps.json
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.runtimeconfig.json
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.runtimeconfig.dev.json
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\ref\Resignation Service.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Resignation Service.pdb
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\AutoMapper.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Castle.Core.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Moq.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\System.Data.SqlClient.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.csproj.AssemblyReference.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.AssemblyInfoInputs.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.AssemblyInfo.cs
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.csproj.CoreCompileInputs.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.MvcApplicationPartsAssemblyInfo.cs
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.MvcApplicationPartsAssemblyInfo.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\staticwebassets\Resignation Service.StaticWebAssets.Manifest.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\staticwebassets\Resignation Service.StaticWebAssets.xml
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\scopedcss\bundle\Resignation Service.styles.css
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.RazorTargetAssemblyInfo.cache
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\ref\Resignation Service.dll
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.pdb
+D:\Product Week Project\Resignation-ServiceWebapi\Resignation Service\obj\Debug\net5.0\Resignation Service.genruntimeconfig.cache
+>>>>>>> 2013288519751bcafd3728d9003d4777b6b30029
